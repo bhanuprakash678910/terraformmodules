@@ -15,7 +15,7 @@ data "aws_subnet" "web" { // Get VPC_ID
 
 resource "aws_instance" "web_server" {
   ami                    = data.aws_ami.latest_amazon_linux.id
-  instance_type          = "t3.micro"
+  instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.webserver.id]
   subnet_id              = var.subnet_id
   user_data              = <<EOF
