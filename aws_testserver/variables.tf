@@ -7,5 +7,4 @@ variable "message" {
 }
 
 variable "subnet_id" {
- type= tuple([public_subnet_id])
 }
